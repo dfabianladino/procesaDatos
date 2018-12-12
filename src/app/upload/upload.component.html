@@ -1,0 +1,21 @@
+<mat-tab-group>
+  <mat-tab label="Principal">
+    <span class="done">
+      <button mat-fab color="primary">
+          <label  mat-list-avatar >
+            <mat-icon>attach_file</mat-icon>
+                <input id="file-upload" type="file" accept=".json" (change)="fileUpload($event)"
+                [style.display]="'none'">
+          </label>
+      </button>
+    </span>
+    <!--<app-table></app-table>-->
+    <app-card-marchine></app-card-marchine>
+  </mat-tab>
+  <mat-tab label="Reporte Detallado">
+    <app-table-detalle></app-table-detalle>
+  </mat-tab>
+  <mat-tab label="Mapa">
+    <app-card-marchine></app-card-marchine>
+  </mat-tab>
+</mat-tab-group>

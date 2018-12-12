@@ -1,0 +1,37 @@
+<mat-grid-list cols="2">
+  <mat-grid-tile>
+  <img src="assets/icons/logo_riopaila.png" width="206px" height="122px">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input matInput placeholder="jose@castilla.com.co" [formControl]="emailFormControl"
+               [errorStateMatcher]="matcher" [(ngModel)]= "loginParams.email">
+               <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                 Porfavor escriba un email valido
+               </mat-error>
+               <mat-error *ngIf="emailFormControl.hasError('required')">
+                 Email es <strong>obligatorio</strong>
+               </mat-error>
+        <mat-icon class="material-icons orange600" matSuffix>how_to_reg</mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput placeholder="********" [formControl]="passwordFormControl"
+               [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'" [(ngModel)]= "loginParams.password">
+               <mat-error *ngIf="passwordFormControl.hasError('required')">
+                 Contraseña es <strong>obligatorio</strong>
+               </mat-error>
+               <mat-icon class="material-icons orange600" matSuffix (click)="hide = !hide">
+                 {{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      </mat-form-field>
+    </p>
+    <button mat-stroked-button color="primary" (click)="login()">Aceptar</button>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

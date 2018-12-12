@@ -1,0 +1,16 @@
+
+<!--<app-table>
+</app-table>-->
+<h1>
+  {{nombre}}
+</h1>
+
+<span class="done">
+  <button mat-fab color="primary">
+      <label  mat-list-avatar >
+        <mat-icon>attach_file</mat-icon>
+            <input #file type="file" (change)="onFileSelect($event.target)" id='file'
+            name='uploadFile' [style.display]="'none'">
+      </label>
+  </button>
+</span>

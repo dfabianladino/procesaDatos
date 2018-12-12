@@ -1,0 +1,60 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="fecha">
+    <th mat-header-cell *matHeaderCellDef>Fecha</th>
+    <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="hora">
+    <th mat-header-cell *matHeaderCellDef>Hora</th>
+    <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="tch">
+    <th mat-header-cell *matHeaderCellDef> TCH </th>
+    <td mat-cell *matCellDef="let element"> {{element.tch}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="longitud">
+    <th mat-header-cell *matHeaderCellDef> Longitud </th>
+    <td mat-cell *matCellDef="let element"> {{element.longitud}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="latitud">
+    <th mat-header-cell *matHeaderCellDef> Latitud</th>
+    <td mat-cell *matCellDef="let element"> {{element.latitud}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="distancia">
+    <th mat-header-cell *matHeaderCellDef> Distancia</th>
+    <td mat-cell *matCellDef="let element"> {{element.distancia}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="velocidad">
+    <th mat-header-cell *matHeaderCellDef> Velocidad </th>
+    <td mat-cell *matCellDef="let element"> {{element.velocidad}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="noOperario">
+    <th mat-header-cell *matHeaderCellDef> # Operario </th>
+    <td mat-cell *matCellDef="let element"> {{element.noOperario}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="noMaquina">
+    <th mat-header-cell *matHeaderCellDef> # Maquina </th>
+    <td mat-cell *matCellDef="let element"> {{element.noMaquina}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tipocana">
+    <th mat-header-cell *matHeaderCellDef> Tipo Caña </th>
+    <td mat-cell *matCellDef="let element"> {{element.tipocana}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

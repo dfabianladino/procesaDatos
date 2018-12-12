@@ -1,7 +1,12 @@
+<!-- toolbar de inicion contiene logo de castilla y datos de sesion -->
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Rio Paila</span>
+    <img src="assets/icons/castilla.svg" width="206px" height="122px" alt="la manzana de apple">
+    <!--<mat-icon svgIcon="castilla" id="id"></mat-icon>-->
     <span class="space"></span>
     <mat-icon>account_circle</mat-icon>
+    <a [routerLink]="['/login']">Salir</a>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<router-outlet></router-outlet>

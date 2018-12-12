@@ -1,0 +1,27 @@
+<mat-card *ngFor="let item of datosbd.daten" class="datos-card" >
+<mat-card-header>
+  <img mat-card-avatar class="example-header-image">
+  <!--<div mat-card-avatar class="example-header-image"></div>-->
+  <mat-card-title><strong>Nombre :</strong> {{item._id.name}}</mat-card-title>
+  <mat-card-subtitle><strong>Cantidad Datos :</strong> {{item.quantitydates}}</mat-card-subtitle>
+</mat-card-header>
+<br>
+<mat-card-content>
+  <mat-divider [inset]="true"></mat-divider>
+  <p>
+     Promedio Velocidad: {{item.avgspeed}}
+  </p>
+  <mat-divider [inset]="true"></mat-divider>
+  <p>
+     Promedio TCH: {{item.avgtch}}
+  </p>
+  <mat-divider [inset]="true"></mat-divider>
+  <p>
+     Productividad: {{item.productivitytime}}
+  </p>
+  <mat-divider [inset]="true"></mat-divider>
+  <p>
+     Fecha Modificación: {{item.lastdayupdated | amLocal | amDateFormat: 'DD-MM-YYYY HH:mm:ss' }}
+  </p>
+</mat-card-content>
+</mat-card>

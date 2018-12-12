@@ -1,0 +1,18 @@
+<!-- toolbar de inicion contiene logo de castilla y datos de sesion -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="assets/icons/castilla.svg" width="206px" height="122px" alt="la manzana de apple">
+    <span class="space"></span>
+    <mat-icon>account_circle</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-tab-group>
+  <mat-tab label="Principal">
+    <app-upload></app-upload>
+  </mat-tab>
+  <mat-tab label="Reporte Detallado">
+    <app-table-detalle></app-table-detalle>
+  </mat-tab>
+  <mat-tab label="Mapa">Content 3</mat-tab>
+</mat-tab-group>
